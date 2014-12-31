@@ -1,0 +1,27 @@
+html, body {height: 100%}
+
+.wrapper {max-width: @maxscreen; margin: 0 auto;}
+
+header {
+    height: @header-height;
+    background: @header-background;
+    overflow: hidden;
+}
+
+#page-wrap {
+    min-height: 100%;
+    margin-bottom: -@footer-height; 
+    clear: both;
+    min-height: ~"calc(100% - @{header-height})";
+
+}
+#page-wrap:after {
+    content: "";
+    display: block;
+}
+footer, #page-wrap:after {
+    height: @footer-height; 
+}
+footer {
+    background: @footer-background;
+}
