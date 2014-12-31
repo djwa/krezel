@@ -6253,28 +6253,24 @@ nav button {
   float: right;
   display: block;
   background: transparent;
-  /* text-indent: -2000em; */
-  width: 113px;
+  text-indent: -2000em;
+  width: 45px;
   height: 40px;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   border: 1px dashed #a67c52;
   border-radius: 4px;
-  padding-left: 10px;
-  text-align: left;
-  font-weight: bold;
-  text-transform: uppercase;
 }
 nav button::after {
   background: none repeat scroll 0 0 #c21010;
   box-shadow: 0px 10px 0 #c21010, 0 20px 0 #c21010;
   content: "";
   height: 5px;
-  left: 60%;
+  left: 16%;
   position: absolute;
   top: 7px;
-  width: 30%;
+  width: 68%;
 }
 nav ul {
   width: 100%;
