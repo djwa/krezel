@@ -12,9 +12,9 @@
                         <h1><strong>Krężel</strong> theme</h1>
                     </div>
                     <div class="col-xs-6">
-                        <nav>
+                        <nav id="dl-menu" class="dl-menuwrapper">
+							<button class="dl-trigger">menu</button>
 							<?php jwa_nav(); ?>
-                            <button>menu</button>
                         </nav>
                     </div>
                 </div>
