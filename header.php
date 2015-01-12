@@ -5,7 +5,7 @@
 		<?php wp_head(); ?>
 	</head>
 	<body>
-	<header>
+		<header>
             <div class="wrapper container">
                 <div class="row">
                     <div class="col-xs-6">
@@ -13,14 +13,8 @@
                     </div>
                     <div class="col-xs-6">
                         <nav>
+							<?php jwa_nav(); ?>
                             <button>menu</button>
-                            <ul>
-                                <li>about me</li>
-                                <li>skills</li>
-                                <li>experience</li>
-                                <li>work samples</li>
-                                <li>contact</li>
-                            </ul>
                         </nav>
                     </div>
                 </div>
