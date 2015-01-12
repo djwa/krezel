@@ -17,19 +17,6 @@
 			</figure>
 		</div>
 	</div>
-	<div class="wrapper container">
-		<div class="row" ng-controller="HomeCrtl">
-			<div class="col-md-12">
-				<ul class="list-group">
-					<li class="list-group-item" ng-repeat="post in postdata">
-						<p>{{post.title}}</p>
-						<p>{{post.content}}</p>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
 </section>
-
 
 <?php get_footer(); ?>

@@ -5,15 +5,18 @@ html, body {height: 100%}
 header {
     height: @header-height;
     background: @header-background;
-    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    border-bottom: 1px solid #a67c52;
 }
 
 #page-wrap {
     min-height: 100%;
     margin-bottom: -@footer-height; 
+    padding-top: @header-height + 50px;
     clear: both;
-    min-height: ~"calc(100% - @{header-height})";
-
+    //min-height: ~"calc(100% - @{header-height})";
 }
 #page-wrap:after {
     content: "";

@@ -6225,15 +6225,18 @@ body {
   margin: 0 auto;
 }
 header {
-  height: 100px;
+  height: 64px;
   background: #ffffff;
-  overflow: hidden;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  border-bottom: 1px solid #a67c52;
 }
 #page-wrap {
   min-height: 100%;
   margin-bottom: -70px;
+  padding-top: 114px;
   clear: both;
-  min-height: calc(100% - 100px);
 }
 #page-wrap:after {
   content: "";
@@ -6250,42 +6253,29 @@ footer {
 .dl-menuwrapper {
   width: 100%;
   max-width: 300px;
-  float: left;
+  float: right;
   position: relative;
   -webkit-perspective: 1000px;
   perspective: 1000px;
   -webkit-perspective-origin: 50% 200%;
   perspective-origin: 50% 200%;
 }
-.dl-menuwrapper:first-child {
-  margin-right: 100px;
+.dl-menuwrapper button.dl-active {
+  background: none repeat scroll 0 0 #c21010;
 }
-.dl-menuwrapper button {
-  background: #ccc;
-  border: none;
-  width: 48px;
-  height: 45px;
-  text-indent: -900em;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
-  outline: none;
-}
-.dl-menuwrapper button:hover,
-.dl-menuwrapper button.dl-active,
-.dl-menuwrapper ul {
-  background: #aaa;
-}
-.dl-menuwrapper button:after {
-  content: '';
-  position: absolute;
-  width: 68%;
+.dl-menuwrapper button.dl-active:after {
+  background: none repeat scroll 0 0 #fff;
+  box-shadow: 0px 10px 0 #fff, 0 20px 0 #fff;
+  content: "";
   height: 5px;
-  background: #fff;
-  top: 10px;
   left: 16%;
-  box-shadow: 0 10px 0 #fff, 
-		0 20px 0 #fff;
+  position: absolute;
+  top: 7px;
+  width: 68%;
+}
+.dl-menuwrapper ul {
+  background: #a67c52;
+  border: 1px solid #fff;
 }
 .dl-menuwrapper ul {
   padding: 0;
@@ -6905,24 +6895,6 @@ All this is done for any sub-level being entered.
   content: '';
 }
 /* Colors for demos */
-/* Demo 1 */
-.demo-1 .dl-menuwrapper button {
-  background: #c62860;
-}
-.demo-1 .dl-menuwrapper button:hover,
-.demo-1 .dl-menuwrapper button.dl-active,
-.demo-1 .dl-menuwrapper ul {
-  background: #9e1847;
-}
-/* Demo 2 */
-.demo-2 .dl-menuwrapper button {
-  background: #e86814;
-}
-.demo-2 .dl-menuwrapper button:hover,
-.demo-2 .dl-menuwrapper button.dl-active,
-.demo-2 .dl-menuwrapper ul {
-  background: #D35400;
-}
 /* Demo 3 */
 .demo-3 .dl-menuwrapper button {
   background: #08cbc4;
@@ -6932,21 +6904,60 @@ All this is done for any sub-level being entered.
 .demo-3 .dl-menuwrapper ul {
   background: #00b4ae;
 }
-/* Demo 4 */
-.demo-4 .dl-menuwrapper button {
-  background: #90b912;
+nav {
+  margin: 12px 0;
 }
-.demo-4 .dl-menuwrapper button:hover,
-.demo-4 .dl-menuwrapper button.dl-active,
-.demo-4 .dl-menuwrapper ul {
-  background: #79a002;
+nav button {
+  float: right;
+  display: block;
+  background: transparent;
+  text-indent: -2000em;
+  width: 45px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border: 1px dashed #a67c52;
+  border-radius: 4px;
+  outline: none;
 }
-/* Demo 5 */
-.demo-5 .dl-menuwrapper button {
-  background: #744783;
+nav button::after {
+  background: none repeat scroll 0 0 #c21010;
+  box-shadow: 0px 10px 0 #c21010, 0 20px 0 #c21010;
+  content: "";
+  height: 5px;
+  left: 16%;
+  position: absolute;
+  top: 7px;
+  width: 68%;
 }
-.demo-5 .dl-menuwrapper button:hover,
-.demo-5 .dl-menuwrapper button.dl-active,
-.demo-5 .dl-menuwrapper ul {
-  background: #643771;
+nav a {
+  text-decoration: none;
+}
+.dl-menuwrapper .dl-menu {
+  margin: 50px 0 0 0;
+}
+header #logo {
+  background: url('assets/images/logo.png') no-repeat 0 0 scroll;
+  width: 54px;
+  height: 82px;
+  text-indent: -3000em;
+  margin-top: 6px;
+}
+header #phone {
+  background: url('assets/images/phone-icon.png') no-repeat 6px 4px scroll;
+  padding-left: 45px;
+  padding-top: 10px;
+  height: 40px;
+  margin-top: 12px;
+  float: right;
+  margin-right: 57px;
+  padding-right: 6px;
+  color: #a67c52;
+  border: 1px dashed #a67c52;
+  border-radius: 4px;
+}
+header #dl-menu {
+  position: absolute;
+  right: 0;
 }

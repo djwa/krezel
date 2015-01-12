@@ -9,10 +9,11 @@
             <div class="wrapper container">
                 <div class="row">
                     <div class="col-xs-6">
-                        <h1><strong>Krężel</strong> theme</h1>
+                        <h1 id="logo"><strong>Krężel</strong></h1>
                     </div>
                     <div class="col-xs-6">
-                        <nav id="dl-menu" class="dl-menuwrapper">
+                        <div id="phone">+48 (91) 564 51 05</div>
+						<nav id="dl-menu" class="dl-menuwrapper">
 							<button class="dl-trigger">menu</button>
 							<?php jwa_nav(); ?>
                         </nav>

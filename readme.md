@@ -1,8 +1,9 @@
 #Theme of krezel website.
-#Author: Jeremi Walewicz-Antonowicz
+Branch: Develop1
+Author: Jeremi Walewicz-Antonowicz
 
-#Choosen technologies:
-#WORDPRESS CMS
-#BOWER
-#LESS
-#JQUERY
+Choosen technologies:
+WORDPRESS CMS
+BOWER
+LESS
+JQUERY
