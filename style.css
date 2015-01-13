@@ -6220,6 +6220,9 @@ html,
 body {
   height: 100%;
 }
+body {
+  font-size: 16px;
+}
 .wrapper {
   max-width: 1250px;
   margin: 0 auto;
@@ -6234,7 +6237,7 @@ header {
 }
 #page-wrap {
   min-height: 100%;
-  margin-bottom: -70px;
+  margin-bottom: -125px;
   padding-top: 114px;
   clear: both;
 }
@@ -6244,7 +6247,7 @@ header {
 }
 footer,
 #page-wrap:after {
-  height: 70px;
+  height: 125px;
 }
 footer {
   background: #a67c52;
@@ -6944,20 +6947,138 @@ header #logo {
   text-indent: -3000em;
   margin-top: 6px;
 }
+header #logo a {
+  display: block;
+  height: 82px;
+  width: 54px;
+}
 header #phone {
+  position: relative;
+  z-index: 2;
+}
+header #phone a {
   background: url('assets/images/phone-icon.png') no-repeat 6px 4px scroll;
-  padding-left: 45px;
-  padding-top: 10px;
+  padding: 10px 6px 0 45px;
   height: 40px;
   margin-top: 12px;
+  margin-right: 105px;
   float: right;
-  margin-right: 57px;
-  padding-right: 6px;
   color: #a67c52;
-  border: 1px dashed #a67c52;
-  border-radius: 4px;
+  box-sizing: border-box;
+}
+header #phone a:hover {
+  text-decoration: none;
 }
 header #dl-menu {
   position: absolute;
-  right: 0;
+  right: 10px;
+}
+@media (max-width: 940px) {
+  header #phone a {
+    text-indent: -2000em;
+    width: 45px;
+    padding: 0;
+    margin-right: 47px;
+    background-position: 50 50!important;
+    border: 1px dashed #a67c52;
+    border-radius: 4px;
+  }
+}
+@media (min-width: 940px) {
+  header nav button {
+    text-indent: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: 45px;
+    color: #a67c52;
+    width: 100px;
+  }
+  header nav button::after {
+    background: none repeat scroll 0 0 #c21010;
+    box-shadow: 0px 10px 0 #c21010, 0 20px 0 #c21010;
+    content: "";
+    height: 5px;
+    left: 7px;
+    position: absolute;
+    top: 7px;
+    width: 30px;
+  }
+  header .dl-menuwrapper button.dl-active::after {
+    left: 7px!important;
+    width: 30px!important;
+  }
+  header .dl-menuwrapper button.dl-active {
+    color: #fff;
+  }
+}
+.top-footer {
+  width: 100%;
+  min-height: 88px;
+}
+.top-footer a {
+  color: #fff;
+  font-size: 24px;
+  padding-top: 24px;
+}
+.top-footer .phone {
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+.top-footer .email {
+  text-align: left;
+  width: 100%;
+  display: block;
+}
+.top-footer .social {
+  display: block;
+  float: right;
+  position: relative;
+  height: 37px;
+  margin: 22px 7px;
+}
+.top-footer .facebook {
+  width: 96px;
+  background: url('assets/images/facebook.png') no-repeat 0 0 scroll;
+}
+.top-footer .twitter {
+  width: 98px;
+  background: url('assets/images/twitter.png') no-repeat 0 0 scroll;
+}
+.top-footer .row,
+.top-footer .row div {
+  min-height: 88px;
+}
+.bottom-footer {
+  background: #fff;
+  width: 100%;
+  height: 37px;
+  bottom: 0;
+  text-align: center;
+}
+.bottom-footer p {
+  padding-top: 8px;
+}
+@media (max-width: 940px) {
+  .top-footer a {
+    text-align: center!important;
+    font-size: 1em!important;
+    float: none!important;
+    display: inline-block !important;
+    margin: 5px 0!important;
+    padding: 0!important;
+  }
+  .top-footer .row,
+  .top-footer .row div {
+    min-height: 100%;
+    text-align: center;
+  }
+}
+.home-content {
+  background: url('assets/images/bg.jpg') no-repeat 50% 0% scroll;
+}
+@media (max-width: 420px) {
+  .home-content {
+    background-size: 350%;
+  }
 }

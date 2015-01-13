@@ -54,8 +54,73 @@ function my_wp_nav_menu_args( $args = '' ) {
 	return $args;
 }
 
+
+
+
+// Pagination for paged posts, Page 1, Page 2, Page 3, with Next and Previous Links, No plugin
+function html5wp_pagination() {
+    global $wp_query;
+    $big = 999999999;
+    echo paginate_links(array(
+        'base' => str_replace($big, '%#%', get_pagenum_link($big)),
+        'format' => '?paged=%#%',
+        'current' => max(1, get_query_var('paged')),
+        'total' => $wp_query->max_num_pages
+    ));
+}
+
+// Custom Excerpts
+function custom_excerpt_length($length) {
+    return 20;
+}
+
+function custom_excerpt_length2($length) {
+    return 30;
+}
+
+// Create the Custom Excerpts callback
+function html5wp_excerpt() {
+    global $post;
+    add_filter('excerpt_length', 'custom_excerpt_length', 999);
+    $output = get_the_excerpt();
+    $output = apply_filters('wptexturize', $output);
+    $output = apply_filters('convert_chars', $output);
+    $output = '<div class="feed-content"><p>' . $output;
+    echo $output;
+}
+
+// Create the Custom Excerpts callback
+function html5wp_excerpt2() {
+    global $post;
+    add_filter('excerpt_length', 'custom_excerpt_length2', 999);
+    $output = get_the_excerpt();
+    $output = apply_filters('wptexturize', $output);
+    $output = apply_filters('convert_chars', $output);
+    $output = '<div class="feed-content"><p>' . $output;
+    echo $output;
+}
+
+// Custom View Article link to Post
+function html5_blank_view_article($more) {
+    global $post;
+    return '...</p></div> <a class="read-more-button" href="' . get_permalink($post->ID) . '">' . __('Read more', 'html5blank') . '</a>';
+}
+
+// Remove Admin bar
+function remove_admin_bar() {
+    return false;
+}
+
+
 add_action( 'init', 'register_menu' ); // Add HTML5 Blank Menu
 add_filter( 'wp_nav_menu_args', 'my_wp_nav_menu_args' ); // Remove surrounding <div> from WP Navigation
 add_action( 'wp_enqueue_scripts', 'mytheme_enqueue_style' ); //styles register
 add_action( 'wp_enqueue_scripts', 'mytheme_enqueue_scripts' ); //scripts register
+
+add_filter('the_excerpt', 'shortcode_unautop'); // Remove auto <p> tags in Excerpt (Manual Excerpts only)
+add_filter('the_excerpt', 'do_shortcode'); // Allows Shortcodes to be executed in Excerpt (Manual Excerpts only)
+add_filter('excerpt_more', 'html5_blank_view_article'); // Add 'View Article' button instead of [...] for Excerpts
+add_filter('show_admin_bar', 'remove_admin_bar'); // Remove Admin bar
+// Remove Filters
+remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
 ?>

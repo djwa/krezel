@@ -5,23 +5,75 @@ header {
         height: 82px; 
         text-indent: -3000em;
         margin-top: 6px;
+        a {
+            display: block;
+            height: 82px;
+            width: 54px;
+        }
     }
 
     #phone {
+        position: relative;
+        z-index: 2;
+    }
+    #phone a {
         background: url('assets/images/phone-icon.png') no-repeat 6px 4px scroll;
-        padding-left: 45px;
-        padding-top: 10px;
+        padding: 10px 6px 0 45px;
         height: 40px;
         margin-top: 12px;
+        margin-right: 105px;
         float: right;
-        margin-right: 57px;
-        padding-right: 6px;
         color: #a67c52;
-        .brown-border;            
+        box-sizing: border-box;
     }
+    #phone a:hover {text-decoration: none;}
 
     #dl-menu {
         position: absolute;
-        right: 0;
+        right: 10px;
     }
+
+    // responsive elements
+
+    //phone
+    @media (max-width: 940px) {
+        #phone a {
+            text-indent: -2000em;
+            width: 45px;
+            padding: 0;
+            margin-right: 47px;
+            background-position: 50 50!important;
+            .brown-border;
+        }
+    }
+
+    //menu
+    @media (min-width: 940px) {
+        nav {
+            button {
+                text-indent: 0;
+                text-transform: uppercase;
+                font-weight: bold;
+                padding-left: 45px;
+                color: #a67c52;
+                width: 100px;
+            }
+            button::after {
+                background: none repeat scroll 0 0 #c21010;
+                box-shadow: 0px 10px 0 #c21010, 0 20px 0 #c21010;
+                content: "";
+                height: 5px;
+                left: 7px;
+                position: absolute;
+                top: 7px;
+                width: 30px;
+            }
+        }
+        .dl-menuwrapper button.dl-active::after {
+            left: 7px!important;
+            width: 30px!important;
+        }
+        .dl-menuwrapper button.dl-active {color: #fff;}
+    }
+
 }

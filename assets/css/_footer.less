@@ -1,0 +1,63 @@
+.top-footer {
+    width: 100%; 
+    min-height: @footer-top-height;
+    a {
+        color: #fff;
+        font-size: 24px;
+        padding-top: (@footer-top-height/2) - 20px;
+    }
+    .phone {
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+    .email {
+        text-align: left; 
+        width: 100%;
+        display: block;
+    }
+    .social {
+        display: block; 
+        float: right;
+        position: relative;
+        height: 37px;
+        margin: ((@footer-top-height/2) - 22px) 7px;
+    }
+    .facebook {
+        width: 96px;
+        background: url('assets/images/facebook.png') no-repeat 0 0 scroll;
+    }
+    .twitter {
+        width: 98px;
+        background: url('assets/images/twitter.png') no-repeat 0 0 scroll;
+    }
+    .row, .row div {
+        min-height: @footer-top-height;
+    }
+}
+
+.bottom-footer {
+    background: #fff; 
+    width: 100%; 
+    height: @footer-bottom-height;
+    bottom: 0;
+    text-align: center;
+    p {padding-top: 8px;}
+}
+
+@media (max-width: 940px) {
+    .top-footer {
+        a {
+            text-align: center!important;
+            font-size: 1em!important;
+            float: none!important;
+            display: inline-block!important;
+            margin: 5px 0!important;
+            padding: 0!important;
+        }
+        .row, .row div {
+            min-height: 100%;
+            text-align: center;
+        }
+    }
+}

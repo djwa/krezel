@@ -1,22 +1,26 @@
 <?php get_header(); ?>
-
-<section id="page-wrap">
-	<div class="wrapper container">
+<main id="page-wrap">
+	<section class="wrapper container">
 		<div class="row">
-			<figure class="col-md-3">
-				<p><strong>Lorem </strong>ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit lacus eget pellentesque rutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean vel elementum massa. Aenean vehicula in ante ac fermentum. Proin pellentesque sollicitudin tellus, et imperdiet nulla pharetra id. Nunc erat dolor, sodales gravida magna eu, fringilla cursus erat. Nunc tempor aliquet leo quis auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed porttitor, dui vel suscipit laoreet, ante velit consequat neque, a dictum sem augue vel nisl. Nam ante justo, varius nec ipsum in, porttitor vehicula dui. Aenean in nisl ipsum. </p>
-			</figure>
-			<figure class="col-md-3">
-				<p>Lorem <span>ipsum</span> dolor sit amet, <a href="#" title="">consectetur</a> adipiscing elit. Nulla blandit lacus eget pellentesque rutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean vel elementum massa. Aenean vehicula in ante ac fermentum. Proin pellentesque sollicitudin tellus, et imperdiet nulla pharetra id. Nunc erat dolor, sodales gravida magna eu, fringilla cursus erat. Nunc tempor aliquet leo quis auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed porttitor, dui vel suscipit laoreet, ante velit consequat neque, a dictum sem augue vel nisl. Nam ante justo, varius nec ipsum in, porttitor vehicula dui. Aenean in nisl ipsum. </p>
-			</figure>
-			<figure class="col-md-3">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit lacus eget pellentesque rutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean vel elementum massa. Aenean vehicula in ante ac fermentum. Proin pellentesque sollicitudin tellus, et imperdiet nulla pharetra id. Nunc erat dolor, sodales gravida magna eu, fringilla cursus erat. Nunc tempor aliquet leo quis auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed porttitor, dui vel suscipit laoreet, ante velit consequat neque, a dictum sem augue vel nisl. Nam ante justo, varius nec ipsum in, porttitor vehicula dui. Aenean in nisl ipsum. </p>
-			</figure>
-			<figure class="col-md-3">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit lacus eget pellentesque rutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean vel elementum massa. Aenean vehicula in ante ac fermentum. Proin pellentesque sollicitudin tellus, et imperdiet nulla pharetra id. Nunc erat dolor, sodales gravida magna eu, fringilla cursus erat. Nunc tempor aliquet leo quis auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed porttitor, dui vel suscipit laoreet, ante velit consequat neque, a dictum sem augue vel nisl. Nam ante justo, varius nec ipsum in, porttitor vehicula dui. Aenean in nisl ipsum. </p>
-			</figure>
+			<article class="col-md-12">
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+						<article id="post-<?php the_ID(); ?>" class="blog-post">
+							<div class="featured-image"><a href="<?php the_permalink() ?>"></a></div>
+							<div class="news-content">
+								<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>		
+								<?php the_content(); ?>
+							</div>
+							<div class="clear"></div>
+						</article>
+						<?php
+					endwhile;
+				else:
+					?>
+					<p>Sorry, this post does not exist</p>
+				<?php endif; ?>
+				<?php get_template_part( 'pagination' ); ?>
+			</article>
 		</div>
-	</div>
-</section>
-
+	</section>
+</main>
 <?php get_footer(); ?>
