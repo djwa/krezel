@@ -7074,11 +7074,62 @@ header #dl-menu {
     text-align: center;
   }
 }
-.home-content {
+.home-bg {
   background: url('assets/images/bg.jpg') no-repeat 50% 0% scroll;
+  margin-top: -50px;
+}
+.holz {
+  float: right;
+  margin-top: 30px;
+}
+.holz p {
+  font-family: "Times New Roman", Times, serif;
+  color: #a67c52;
+  font-size: 4.25em;
+}
+.holz p span {
+  color: #c21010;
+}
+#cards-view figure {
+  text-align: center;
+  padding: 0!important;
+}
+#cards-view figure .card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  border: 2px solid #ebebeb;
+  width: 270px;
+  margin-bottom: 20px;
+  height: 385px;
+  display: inline-block;
+  padding: 10px;
+}
+#cards-view figure .card h1 {
+  font-size: 1.5em;
+  font-style: italic;
+  color: #000000;
+}
+#cards-view figure .card p {
+  text-align: left;
+}
+@media (max-width: 940px) {
+  .holz {
+    margin-top: 0;
+  }
+  .holz p {
+    font-size: 2.25em;
+  }
 }
 @media (max-width: 420px) {
-  .home-content {
+  .home-bg {
     background-size: 350%;
+  }
+  .holz p {
+    font-size: 1.15em;
+  }
+  figure .card {
+    height: 305px;
+    display: inline-block;
+    padding: 10px;
   }
 }

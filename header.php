@@ -2,6 +2,8 @@
 <html <?php language_attributes(); ?> ng-app="myapp">
 	<head>
 		<title>Krezel Theme</title>
+		<link href="<?php echo get_template_directory_uri(); ?>/assets/images/icon.ico" rel="shortcut icon">
+        <link href="<?php echo get_template_directory_uri(); ?>/assets/images/touch.png" rel="apple-touch-icon-precomposed">
 		<?php wp_head(); ?>
 	</head>
 	<body>
