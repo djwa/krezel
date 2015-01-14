@@ -7,30 +7,22 @@
 		<section class="wrapper container" id="cards-view">
 			<figure class="col-xs-12 col-sm-6 col-md-3">
 				<div class="card">
-					<h1>Ausrüstung Strände</h1>
-					<img src="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/images/beach.png" alt=""/>
-					<p><strong>Lorem </strong>ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit lacus eget pellentesque rutrum. Class aptent.</p>
+					<?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( 'box1' ) )  ?>
 				</div>
 			</figure>
 			<figure class="col-xs-12 col-sm-6 col-md-3">
 				<div class="card">
-					<h1>Weihnachtseinkäufe</h1>
-					<img src="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/images/cabins.png" alt=""/>
-					<p>Lorem <span>ipsum</span> dolor sit amet, <a href="#" title="">consectetur</a> adipiscing elit. Nulla blandit lacus eget pellentesque rutrum.</p>
+					<?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( 'box2' ) )  ?>
 				</div>
 			</figure>
 			<figure class="col-xs-12 col-sm-6 col-md-3">
 				<div class="card">
-					<h1>Cottages</h1>
-					<img src="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/images/houses.png" alt=""/>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit lacus eget pellentesque rutrum. Class aptent taciti sociosqu ad litora.</p>
+					<?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( 'box3' ) )  ?>
 				</div>
 			</figure>
 			<figure class="col-xs-12 col-sm-6 col-md-3">
 				<div class="card">
-					<h1>Möbel-Terrassen</h1>
-					<img src="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/images/bar.png" alt=""/>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit lacus eget pellentesque rutrum. Class aptent taciti sociosqu ad litora.</p>
+					<?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( 'box4' ) )  ?>
 				</div>
 			</figure>
 		</section>

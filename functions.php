@@ -7,10 +7,12 @@ function mytheme_enqueue_style() {
 function mytheme_enqueue_scripts() {
 	// register Libraries
 	wp_register_script( 'jq', get_bloginfo( 'template_directory' ) . '/bower_components/jquery/dist/jquery.min.js', array(), null, false );
+	wp_register_script( 'functions', get_bloginfo( 'template_directory' ) . '/assets/js/functions.js', array(), null, false );
 	wp_register_script( 'modernizr', get_bloginfo( 'template_directory' ) . '/assets/js/modernizr.custom.js', array(), null, false );
 
 	// enqueue all scripts
 	wp_enqueue_script( 'jq' );
+	wp_enqueue_script( 'functions' );
 	wp_enqueue_script( 'modernizr' );
 }
 
@@ -118,14 +120,58 @@ function my_remove_recent_comments_style() {
 // If Dynamic Widgets Learn More
 if ( function_exists( 'register_sidebar' ) ) {
 	register_sidebar( array(
-		'name' => __( 'Home page - intro text', 'html5blank' ),
-		'description' => __( 'Please type an intro text for home page orange box.', 'html5blank' ),
-		'id' => 'intro-text',
+		'name' => __( 'language placeholder', 'html5blank' ),
+		'description' => __( 'Your language switcher.', 'html5blank' ),
+		'id' => 'lang-ph',
 		'before_widget' => '<div>',
 		'after_widget' => '</div>',
-		'before_title' => '<h1>',
-		'after_title' => '</h1>'
+		'before_title' => '<p class="widget-title">',
+		'after_title' => '</p>'
 	) );
+	register_sidebar( array(
+		'name' => __( 'box1', 'html5blank' ),
+		'description' => __( 'Content of box1.', 'html5blank' ),
+		'id' => 'box1',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<p class="widget-title">',
+		'after_title' => '</p>'
+	) );
+	register_sidebar( array(
+		'name' => __( 'box2', 'html5blank' ),
+		'description' => __( 'Content of box2.', 'html5blank' ),
+		'id' => 'box2',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<p class="widget-title">',
+		'after_title' => '</p>'
+	) );
+	register_sidebar( array(
+		'name' => __( 'box3', 'html5blank' ),
+		'description' => __( 'Content of box3.', 'html5blank' ),
+		'id' => 'box3',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<p class="widget-title">',
+		'after_title' => '</p>'
+	) );
+	register_sidebar( array(
+		'name' => __( 'box4', 'html5blank' ),
+		'description' => __( 'Content of box4.', 'html5blank' ),
+		'id' => 'box4',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<p class="widget-title">',
+		'after_title' => '</p>'
+	) );
+}
+
+function shorten( $str, $len ) {
+	if ( strlen( $str ) > $len ) {
+		return substr( $str, 0, strrpos( substr( $str, 0, $len ), ' ' ) ) . '...';
+	} else {
+		return $str;
+	}
 }
 
 add_action( 'widgets_init', 'my_remove_recent_comments_style' ); // Remove inline Recent Comment Styles from wp_head()

@@ -33,6 +33,31 @@ header {
         right: 10px;
     }
 
+    .qts-lang-menu {
+        display: block;
+        width: 115px;
+        overflow: hidden;
+        float: right;
+        margin-top: 22px;
+        margin-right: 10px;
+        z-index: 3;
+        li {
+            list-style-type: none;
+            float: left;
+            margin: 0 5px;
+            a {
+                text-transform: uppercase;
+                color: #a67c52;
+            }
+        }
+        li:nth-of-type(1) a:after {
+            content: '/';
+            padding-left: 5px;
+        }
+    }
+
+
+
     // responsive elements
 
     //phone
@@ -45,7 +70,13 @@ header {
             background-position: 50 50!important;
             .brown-border;
         }
+        .qts-lang-menu {
+            position: absolute;
+            right: 100px;
+        }
     }
+
+
 
     //menu
     @media (min-width: 940px) {

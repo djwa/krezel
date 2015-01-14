@@ -15,6 +15,7 @@
                     </div>
                     <div class="col-xs-6">
                         <div id="phone"><a href="tel:+48915645105">+48 (91) 564 51 05</a></div>
+						<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('lang-ph'))  ?>
 						<nav id="dl-menu" class="dl-menuwrapper">
 							<button class="dl-trigger">menu</button>
 							<?php jwa_nav(); ?>
