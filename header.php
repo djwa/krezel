@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> ng-app="myapp">
 	<head>
-		<title>Krezel Theme</title>
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width, minimal-ui">
 		<link href="<?php echo get_template_directory_uri(); ?>/assets/images/icon.ico" rel="shortcut icon">
         <link href="<?php echo get_template_directory_uri(); ?>/assets/images/touch.png" rel="apple-touch-icon-precomposed">
 		<?php wp_head(); ?>
