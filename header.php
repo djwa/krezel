@@ -14,7 +14,7 @@
                         <h1 id="logo"><strong><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Krężel</a></strong></h1>
                     </div>
                     <div class="col-xs-6">
-                        <div id="phone"><a href="tel:+48915645105">+48 (91) 564 51 05</a></div>
+                        <div id="phone"><a href="tel:+48915645105">+48 91 564 51 08</a></div>
 						<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('lang-ph'))  ?>
 						<nav id="dl-menu" class="dl-menuwrapper">
 							<button class="dl-trigger">menu</button>

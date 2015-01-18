@@ -6,7 +6,7 @@
 					<a href="mailto:biuro@krezelltd.com.pl" title="email" class="email">biuro@krezelltd.com.pl</a>
 				</div>
 				<div class="col-md-4">
-					<a href="tel:+48915645105" title="tel" class="phone">+48 (91) 564 51 05</a>
+					<a href="tel:+48915645105" title="tel" class="phone">+48 91 564 51 08</a>
 				</div>
 				<div class="col-md-4">
 					<a href="http://twitter.com" target="_blank" title="Twitter" class="social twitter"></a>

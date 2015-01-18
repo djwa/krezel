@@ -53,7 +53,7 @@ class GTextWidget extends WP_Widget {
 		$text = empty( $instance['text'] ) ? '' : $instance['text'];
 		$link1 = ( empty( $instance['link1'] ) ) ? 0 : $instance['link1'];
 		echo $before_widget;
-		echo '<h1>' . $instance['lang_title'] . '</h1>';
+		echo '<h1><a href="' . get_permalink( $instance['link_target'] ) . '" title="">' . $instance['lang_title'] . '</a></h1>';
 		if ( !( $link1 ) ) {
 			echo "Please configure this widget.";
 		} else {

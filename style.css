@@ -1,7 +1,7 @@
 /*!
 Theme Name: Krezel
 Theme URI:
-Author: djwa Jeremi
+Author: djwa Jeremi | Itpol Sp. z o.o.
 Author URI:
 Description: Krezel theme
 Version: 1.0
@@ -6975,7 +6975,7 @@ header #dl-menu {
 }
 header .qts-lang-menu {
   display: block;
-  width: 115px;
+  width: 165px;
   overflow: hidden;
   float: right;
   margin-top: 22px;
@@ -6991,7 +6991,8 @@ header .qts-lang-menu li a {
   text-transform: uppercase;
   color: #a67c52;
 }
-header .qts-lang-menu li:nth-of-type(1) a:after {
+header .qts-lang-menu li:nth-of-type(1) a:after,
+header .qts-lang-menu li:nth-of-type(2) a:after {
   content: '/';
   padding-left: 5px;
 }
@@ -7158,6 +7159,72 @@ header .qts-lang-menu li:nth-of-type(1) a:after {
 #cards-view figure .card .box-img a {
   float: none;
 }
+.main-content {
+  padding: 20px 0;
+}
+.main-content p {
+  font-size: 14px;
+}
+.main-content .introtext-placeholder {
+  float: right;
+}
+.main-content .chart-placeholder {
+  float: right;
+}
+.main-content .chart-container {
+  width: 100%;
+  margin: 0 auto;
+}
+.quote-content {
+  min-height: 100px;
+  width: 100%;
+  background: #e09e46;
+}
+.quote-content .row {
+  padding: 40px 45px;
+}
+.quote-content article img {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+.quote-content .carousel-indicators {
+  bottom: -20px;
+}
+.quote-content .carousel-indicators li {
+  border-color: #000;
+}
+.quote-content .carousel-indicators .active {
+  background: #000;
+}
+.quote-content p {
+  padding-top: 15px;
+  font-weight: bold;
+}
+@media (max-width: 990px) {
+  .quote-content {
+    text-align: center;
+  }
+  .quote-content article img {
+    margin: 10px auto 20px;
+  }
+  .quote-content .carousel-indicators {
+    bottom: -33px;
+  }
+}
+@media (max-width: 790px) {
+  .quote-content .row {
+    padding: 40px 5px;
+  }
+}
+@media (max-width: 540px) {
+  .introtext-placeholder {
+    float: none;
+  }
+  .chart-placeholder {
+    float: none;
+  }
+}
 @media (max-width: 940px) {
   .holz {
     margin-top: 0;
@@ -7177,14 +7244,11 @@ header .qts-lang-menu li:nth-of-type(1) a:after {
 @media (max-width: 625px) {
   #cards-view {
     height: 400px!important;
-    width: 100%;
     overflow: hidden;
   }
   #cards-view figure {
     float: left;
-  
-    /* top: -800px; */
-}
+  }
   #cards-view .card {
     max-height: 385px!important;
   }

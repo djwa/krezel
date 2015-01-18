@@ -7,11 +7,15 @@ function mytheme_enqueue_style() {
 function mytheme_enqueue_scripts() {
 	// register Libraries
 	wp_register_script( 'jq', get_bloginfo( 'template_directory' ) . '/bower_components/jquery/dist/jquery.min.js', array(), null, false );
+	wp_register_script( 'carousel', get_bloginfo( 'template_directory' ) . '/bower_components/bootstrap-less/js/carousel.js', array(), null, false );
+	wp_register_script( 'transition', get_bloginfo( 'template_directory' ) . '/bower_components/bootstrap-less/js/transition.js', array(), null, false );
 	wp_register_script( 'functions', get_bloginfo( 'template_directory' ) . '/assets/js/functions.js', array(), null, false );
 	wp_register_script( 'modernizr', get_bloginfo( 'template_directory' ) . '/assets/js/modernizr.custom.js', array(), null, false );
 
 	// enqueue all scripts
 	wp_enqueue_script( 'jq' );
+	wp_enqueue_script( 'carousel' );
+	wp_enqueue_script( 'transition' );
 	wp_enqueue_script( 'functions' );
 	wp_enqueue_script( 'modernizr' );
 }
@@ -164,6 +168,15 @@ if ( function_exists( 'register_sidebar' ) ) {
 		'before_title' => '<p class="widget-title">',
 		'after_title' => '</p>'
 	) );
+	register_sidebar( array(
+		'name' => __( 'chart', 'html5blank' ),
+		'description' => __( 'Content of box4.', 'html5blank' ),
+		'id' => 'chart',
+		'before_widget' => '<div class="chart-container">',
+		'after_widget' => '</div>',
+		'before_title' => '<p class="widget-title">',
+		'after_title' => '</p>'
+	) );
 }
 
 function shorten( $str, $len ) {
@@ -188,4 +201,8 @@ add_filter( 'widget_text', 'do_shortcode' ); // Allow shortcodes in Dynamic Side
 add_filter( 'widget_text', 'shortcode_unautop' ); // Remove <p> tags in Dynamic Sidebars (better!)
 // Remove Filters
 remove_filter( 'the_excerpt', 'wpautop' ); // Remove <p> tags from Excerpt altogether
+
+
+$role_object = get_role( 'editor' );
+$role_object->add_cap( 'edit_theme_options' );
 ?>
