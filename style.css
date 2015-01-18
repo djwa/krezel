@@ -7183,14 +7183,21 @@ header .qts-lang-menu li:nth-of-type(2) a:after {
 .quote-content .row {
   padding: 40px 45px;
 }
-.quote-content article img {
+.quote-content .image-wrap {
   display: block;
   text-align: center;
   margin: 0 auto;
   width: 88px;
-  height: auto;
+  height: 88px;
   border-radius: 100%;
   border: 2px solid #fef3a7;
+  overflow: hidden;
+}
+.quote-content article img {
+  max-width: 88px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
 }
 .quote-content .carousel-indicators {
   bottom: -30px;

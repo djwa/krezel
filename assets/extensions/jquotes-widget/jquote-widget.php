@@ -56,7 +56,7 @@ class jQuoteWidget extends WP_Widget {
 			echo "Please configure this widget.";
 		} else {
 			if ( $link1 ) {
-				echo '<div class="col-md-2"><img src="' . $link1 . '" alt="" border="0"></div>';
+				echo '<div class="col-md-2"><div class="image-wrap"><img src="' . $link1 . '" alt="" border="0"></div></div>';
 			}
 		}
 		$tekst = $instance['lang_text'];
