@@ -53,45 +53,18 @@
 			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 				<!-- Indicators -->
 				<ol class="carousel-indicators">
-					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					<?php
+					$the_sidebars = wp_get_sidebars_widgets();
+					$count_sidebards = count( $the_sidebars['quotes'] );
+					for ( $i = 0; $i < $count_sidebards; ++$i ) {
+						echo '<li data-target="#carousel-example-generic" data-slide-to="' . $i . '"></li>';
+					}
+					?>
 				</ol>
 				<div class="carousel-inner" role="listbox">
-					<div class="item active">
-						<div class="col-md-2">
-							<img src="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/images/avatar.png" alt="" />
-						</div>
-						<div class="col-md-10">
-							<blackquete>
-								“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sagittis odio nisi, ac consectetur diam tincidunt vel. Duis quam nunc, sodales nec rutrum in, dignissim vel ante. ”
-							</blackquete>
-							<p>Lorem lipsum</p>
-						</div>
-					</div>
-					<div class="item">
-						<div class="col-md-2">
-							<img src="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/images/avatar.png" alt="" />
-						</div>
-						<div class="col-md-10">
-							<blackquete>
-								“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sagittis odio nisi, ac consectetur diam tincidunt vel. Duis quam nunc, sodales nec rutrum in, dignissim vel ante. ”
-							</blackquete>
-							<p>Gus Fring</p>
-						</div>
-					</div>				
-					<div class="item">
-						<div class="col-md-2">
-							<img src="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/images/avatar.png" alt="" />
-						</div>
-						<div class="col-md-10">
-							<blackquete>
-								“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sagittis odio nisi, ac consectetur diam tincidunt vel. Duis quam nunc, sodales nec rutrum in, dignissim vel ante. ”
-							</blackquete>
-							<p>Micheal Ermantraunt</p>
-						</div>
-					</div>
+					<?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( 'quotes' ) )  ?>
 				</div>
+			</div>
 			</div>
 		</article>
 	</section>

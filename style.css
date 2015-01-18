@@ -7187,12 +7187,18 @@ header .qts-lang-menu li:nth-of-type(2) a:after {
   display: block;
   text-align: center;
   margin: 0 auto;
+  width: 88px;
+  height: auto;
+  border-radius: 100%;
+  border: 2px solid #fef3a7;
 }
 .quote-content .carousel-indicators {
-  bottom: -20px;
+  bottom: -30px;
 }
 .quote-content .carousel-indicators li {
   border-color: #000;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 .quote-content .carousel-indicators .active {
   background: #000;
@@ -7208,8 +7214,8 @@ header .qts-lang-menu li:nth-of-type(2) a:after {
   .quote-content article img {
     margin: 10px auto 20px;
   }
-  .quote-content .carousel-indicators {
-    bottom: -33px;
+  .quote-content c.arousel-indicators {
+    bottom: -30px;
   }
 }
 @media (max-width: 790px) {

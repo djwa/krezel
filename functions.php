@@ -177,7 +177,17 @@ if ( function_exists( 'register_sidebar' ) ) {
 		'before_title' => '<p class="widget-title">',
 		'after_title' => '</p>'
 	) );
+	register_sidebar( array(
+		'name' => __( 'quotes', 'html5blank' ),
+		'description' => __( 'Quotes placeholder.', 'html5blank' ),
+		'id' => 'quotes',
+		'before_widget' => '<div id="%1$s" class="item %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<p class="widget-title">',
+		'after_title' => '</p>'
+	) );
 }
+
 
 function shorten( $str, $len ) {
 	if ( strlen( $str ) > $len ) {

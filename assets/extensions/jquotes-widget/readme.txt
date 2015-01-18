@@ -1,4 +1,4 @@
-=== gText Widget ===
+=== jQuote Widget ===
 Contributors: Guram Kajaia, Kevin Filteau
 tags: multilingual, language, text, widget, admin, translation
 Requires at least: 2.8.x
