@@ -25,12 +25,17 @@
     }
     .facebook {
         width: 96px;
+        opacity: .48;
         background: url('assets/images/facebook.png') no-repeat 0 0 scroll;
+        transition: 0.4s linear;
     }
     .twitter {
+        transition: 0.4s linear;
+        opacity: .48;
         width: 98px;
         background: url('assets/images/twitter.png') no-repeat 0 0 scroll;
     }
+    .facebook:hover, .twitter:hover {opacity: 1;}
     .row, .row div {
         min-height: @footer-top-height;
     }
